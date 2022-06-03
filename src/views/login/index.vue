@@ -109,7 +109,9 @@ methods: {
     // 获取用户手机号，验证码
     try {
       const { data } = await userLoginAPI(this.user)
-      this.$store.commit('setToken',data.data.token)
+      console.log(data)
+      this.$store.commit('setToken',data.data)
+      this.$router.push({ path: '/my' })
       this.$toast.success('登录成功')
     } catch (err) {
       let message = '登录失败，请稍后重试'
