@@ -6,10 +6,19 @@ import router from './router/index.js'
 import store from './store/index.js'
 // 全局css样式
 import './style/index.less'
+import 'amfe-flexible'
 // vant 组件
-import { Button } from 'vant'
+import { Button, NavBar, Field, Cell, CellGroup, Toast, Form, CountDown } from 'vant'
 // vant 组件全局注册
 Vue.use(Button)
+Vue.use(NavBar)
+Vue.use(Field)
+Vue.use(Cell)
+Vue.use(CellGroup)
+Vue.use(Toast)
+Vue.use(Form)
+Vue.use(CountDown)
+
 Vue.config.productionTip = false
 
 new Vue({
